@@ -20,7 +20,6 @@ public class ReviewController {
 	@Autowired
 	private ReviewService reviewService;
 	
-	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping
 	public ResponseEntity<Review> createReview(@RequestBody Map<String,String> payload){
 		System.out.println(payload);

@@ -29,14 +29,12 @@ public class Controller {
 
 	
 	//@GetMapping(value="/allMovies")
-	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping
 	public ResponseEntity<List<Movie>> allMovies() {
 		System.out.println(movieService.allMovies());
 		return new ResponseEntity<List<Movie>>(movieService.allMovies(),HttpStatus.OK);
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/{imdbId}")
 	public ResponseEntity<Optional<Movie>> getMovie(@PathVariable String imdbId){
 		System.out.println(movieService.allMovies());
